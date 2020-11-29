@@ -1,4 +1,5 @@
 FROM node:14
+
 WORKDIR /app
 
 COPY package.json /app
@@ -6,7 +7,8 @@ RUN npm install
 
 COPY . /app
 
-ENV PORT 8080
+ARG DEFAULT_PORT=8080
+ENV PORT $DEFAULT_PORT
 
 EXPOSE $PORT
 VOLUME [ "/app/node_modules" ]
