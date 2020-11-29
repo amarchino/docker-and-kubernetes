@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:14
 WORKDIR /app
 
 COPY package.json /app
@@ -8,4 +8,4 @@ COPY . /app
 
 EXPOSE 80
 VOLUME [ "/app/node_modules" ]
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]
