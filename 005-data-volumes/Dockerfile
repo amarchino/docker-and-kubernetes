@@ -6,7 +6,9 @@ RUN npm install
 
 COPY . /app
 
-EXPOSE 80
+ENV PORT 8080
+
+EXPOSE $PORT
 VOLUME [ "/app/node_modules" ]
 VOLUME [ "/app/temp" ]
 CMD [ "npm", "start" ]
