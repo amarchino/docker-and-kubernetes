@@ -1,5 +1,5 @@
-feedback/
-temp/
+./feedback/
+./temp/
 
-!feedback/DND
-!temp/DND
+!./feedback/DND
+!./temp/DND
