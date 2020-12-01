@@ -84,7 +84,7 @@ app.delete('/goals/:id', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://host.docker.internal:27017/course-goals',
+  'mongodb://007-mongo:27017/course-goals',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
