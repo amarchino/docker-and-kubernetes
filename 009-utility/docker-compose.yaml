@@ -1,7 +1,11 @@
 version: '3.8'
 services:
   npm:
-    build: ./
+    build:
+      context: ./
+      args:
+        USER_ID: 1000
+        GROUP_ID: 1000
     stdin_open: true
     tty: true
     init: true
