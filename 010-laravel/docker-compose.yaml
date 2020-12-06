@@ -25,5 +25,3 @@ services:
       - ./src:/var/www/html:cached
   # artisan:
   # npm:
-
-volumes:
