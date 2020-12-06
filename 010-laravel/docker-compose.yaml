@@ -27,5 +27,16 @@ services:
       dockerfile: composer.dockerfile
     volumes:
       - ./src:/var/www/html:cached
-  # artisan:
-  # npm:
+  artisan:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src:/var/www/html:cached
+    entrypoint: [ "php", "/var/www/html/artisan" ]
+  npm:
+    image: node:15
+    working_dir: /var/www/html
+    volumes:
+      - ./src:/var/www/html:cached
+    entrypoint: [ "npm" ]
