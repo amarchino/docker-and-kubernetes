@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
   server:
-    image: 'nginx:stable-alpine'
+    build:
+      context: ./
+      dockerfile: dockerfiles/nginx.dockerfile
     ports:
       - '8000:80'
     volumes:
@@ -13,8 +15,8 @@ services:
       - mysql
   php:
     build:
-      context: ./dockerfiles
-      dockerfile: php.dockerfile
+      context: ./
+      dockerfile: dockerfiles/php.dockerfile
     volumes:
       - ./src:/var/www/html:cached
   mysql:
@@ -29,8 +31,8 @@ services:
       - ./src:/var/www/html:cached
   artisan:
     build:
-      context: ./dockerfiles
-      dockerfile: php.dockerfile
+      context: ./
+      dockerfile: dockerfiles/php.dockerfile
     volumes:
       - ./src:/var/www/html:cached
     entrypoint: [ "php", "/var/www/html/artisan" ]
