@@ -36,6 +36,12 @@ spec:
       containers:
         - name: second-node
           image: marchino/kub-first-app:2
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: 8080
+          #   periodSeconds: 10
+          #   initialDelaySeconds: 5
           resources:
               limits:
                 memory: 1Gi
