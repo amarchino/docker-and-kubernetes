@@ -1,3 +1,4 @@
+# Imperative
 ## Create deployment
 `kubectl create deployment first-app --image=marchino/kub-first-app`
 ## Expose
@@ -11,3 +12,9 @@
 ## Delete deployment
 `kubectl delete deployment first-app`\
 `kubectl delete service first-app`
+
+# Declarative
+## Apply
+`kubectl apply -f=<file>`
+## Delete
+`kubectl delete -f=<file>`
