@@ -42,6 +42,7 @@ spec:
           #     port: 8080
           #   periodSeconds: 10
           #   initialDelaySeconds: 5
+          imagePullPolicy: Always
           resources:
               limits:
                 memory: 1Gi
