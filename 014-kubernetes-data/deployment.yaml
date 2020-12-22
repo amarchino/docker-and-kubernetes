@@ -14,10 +14,13 @@ spec:
     spec:
       containers:
       - name: story
-        image: marchino/kub-data-demo:1
+        image: marchino/kub-data-demo:2
         volumeMounts:
           - mountPath: /app/story
             name: story-volume
+        env:
+          - name: STORY_FOLDER
+            value: story
         resources:
           limits:
             memory: "128Mi"
