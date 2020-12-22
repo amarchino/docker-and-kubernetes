@@ -20,7 +20,10 @@ spec:
             name: story-volume
         env:
           - name: STORY_FOLDER
-            value: story
+            valueFrom:
+              configMapKeyRef:
+                name: data-store-env
+                key: folder
         resources:
           limits:
             memory: "128Mi"
