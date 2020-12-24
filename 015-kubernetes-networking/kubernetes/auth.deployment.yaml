@@ -1,24 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: users-deployment
+  name: auth-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: users
+      app: auth
   template:
     metadata:
       labels:
-        app: users
+        app: auth
     spec:
       containers:
-      - name: users
-        image: marchino/kub-demo-users:latest
+      - name: auth
+        image: marchino/kub-demo-auth:latest
         resources:
           limits:
             memory: "128Mi"
             cpu: "250m"
-        env:
-          - name: AUTH_ADDRESS
-            value: localhost
