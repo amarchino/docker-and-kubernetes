@@ -21,4 +21,4 @@ spec:
             cpu: "250m"
         env:
           - name: AUTH_ADDRESS
-            value: localhost
+            value: "10.100.59.139"
