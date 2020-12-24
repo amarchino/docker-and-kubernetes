@@ -14,7 +14,13 @@ spec:
     spec:
       containers:
       - name: users
-        image: marchino/kub-demo-users
+        image: marchino/kub-demo-users:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+      - name: auth
+        image: marchino/kub-demo-auth:latest
         resources:
           limits:
             memory: "128Mi"
