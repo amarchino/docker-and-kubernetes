@@ -19,6 +19,9 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "250m"
+        env:
+          - name: AUTH_ADDRESS
+            value: localhost
       - name: auth
         image: marchino/kub-demo-auth:latest
         resources:
