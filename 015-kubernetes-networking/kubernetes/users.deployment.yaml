@@ -21,4 +21,5 @@ spec:
             cpu: "250m"
         env:
           - name: AUTH_ADDRESS
-            value: "10.100.59.139"
+            # value: "10.100.59.139"
+            value: "auth-service.default"
