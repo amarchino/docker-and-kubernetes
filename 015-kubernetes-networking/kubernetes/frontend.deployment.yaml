@@ -19,3 +19,8 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "250m"
+        env:
+          - name: USERS_ADDRESS
+            value: "users-service.default:8080"
+          - name: TASKS_ADDRESS
+            value: "tasks-service.default:8000"
